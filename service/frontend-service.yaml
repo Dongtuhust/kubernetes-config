@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    micro-frontend: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      micro-frontend: frontend
+  template:
+    metadata:
+      name: frontend
+      labels:
+        micro-frontend: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: dongtu/kube-microservice:frontend-v2
+        ports:
+          - containerPort: 1085
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  labels:
+    micro-frontend: frontend
+spec:
+  selector:
+    micro-frontend: frontend
+  externalIPs:
+    - 10.148.0.6
+  ports:
+    - port: 80
+      targetPort: 80
