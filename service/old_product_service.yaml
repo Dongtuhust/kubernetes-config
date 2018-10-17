@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 1081
       - name: old-productdb
-        image: dongtu/kube-microservice:old-product-dbv2
+        image: dongtu/kube-microservice:old-product-db-latest
         ports:
           - containerPort: 3309
 ---

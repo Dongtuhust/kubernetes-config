@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 1084
       - name: users-db
-        image: dongtu/kube-microservice:users-dbv2
+        image: dongtu/kube-microservice:users-db-latest
         ports:
           - containerPort: 3309
 ---
