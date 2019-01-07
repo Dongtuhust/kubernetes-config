@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: dongtu/kube-microservice:frontend-latest
+        image: dongtu/kube-microservice:frontend-sevice
         ports:
           - containerPort: 1085
 ---
