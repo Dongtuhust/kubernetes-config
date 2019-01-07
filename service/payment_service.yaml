@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: payment-api
-        image: dongtu/kube-microservice:payment-api-v3
+        image: dongtu/kube-microservice:payment-v3
         ports:
           - containerPort: 1085
       - name: payment-db
