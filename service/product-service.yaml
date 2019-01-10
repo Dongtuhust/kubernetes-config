@@ -17,13 +17,9 @@ spec:
     spec:
       containers:
       - name: product-api
-        image: dongtu/kube-microservice:product-api-lastest
+        image: dongtu/kube-microservice:product-api-latest
         ports:
           - containerPort: 1080
-      - name: productdb
-        image: dongtu/kube-microservice:productdb-latest
-        ports:
-          - containerPort: 3309
 
 ---
 apiVersion: v1
